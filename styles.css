@@ -1,0 +1,184 @@
+/* ==========================================
+   GLOBAL RESET & MAIN BACKGROUND CENTER
+   ========================================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght=400;600;700&family=Sacramento&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffb3c6; 
+    overflow: hidden;
+    padding: 20px;
+}
+
+/* CARD CONTAINER */
+.card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 40px 30px;
+    border-radius: 30px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 450px;
+    width: 100%;
+    transition: opacity 0.5s ease, transform 0.5s ease; 
+}
+
+/* ITATAGO ANG MGA SCREENS 2, 3, 4, AT 5 SA SIMULA PARA HINDI MAGPATONG-PATONG */
+.date-screen, .time-screen, .location-screen, .invitation-screen {
+    display: none; 
+    opacity: 0;
+    transform: scale(0.9);
+}
+
+.question-screen h1 {
+    color: #c9184a;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.question-screen p {
+    color: #ff4d6d;
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-bottom: 35px;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    min-height: 50px;
+}
+
+button {
+    padding: 12px 35px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+#yesBtn {
+    background: #ff4d6d;
+    color: white;
+    transition: transform 0.2s;
+}
+
+#yesBtn:hover {
+    transform: scale(1.1);
+    background: #ff758f;
+}
+
+#noBtn {
+    background: #fff;
+    color: #590d22;
+    z-index: 999;
+    /* Tinanggal ang position absolute dito para magkatabi sila sa simula */
+    transition: transform 0s !important;
+   
+}
+
+.date-screen h2, .time-screen h2, .location-screen h2 {
+    color: #590d22;
+    font-size: 2rem;
+    margin-bottom: 25px;
+}
+
+.input-container {
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+/* UNIFORM DESIGN PARA SA LAHAT NG INPUT AT SELECT OPTIONS FIELD */
+#dateInput, #timeInput, #locationInput {
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 1.2rem;
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    border-radius: 20px;
+    background: #f7f7f7;
+    color: #590d22;
+    outline: none;
+    text-align: center;
+    text-align-last: center; /* Gitna pati ang text sa dropdown list selection options */
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.05);
+    appearance: none; /* Tinatanggal ang default pangit na drop arrow ng system niyo */
+    cursor: pointer;
+}
+
+/* ACTION CONTROLS FOR OVERRIDES */
+.action-btn {
+    background: #ff758f;
+    color: white;
+    padding: 12px 40px;
+    font-size: 1rem;
+    border-radius: 50px;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.action-btn:hover {
+    transform: scale(1.05);
+    background: #ff4d6d;
+}
+
+/* FINAL SCREEN STYLES */
+.invitation-screen {
+    max-width: 500px;
+    border: 3px dashed #ffb3c6;
+    background: #fff;
+}
+
+.invitation-screen h2 {
+    font-family: 'Sacramento', cursive;
+    font-size: 4rem;
+    color: #c9184a;
+    margin-bottom: 5px;
+}
+
+.invitation-screen .sub-title {
+    font-size: 1.1rem;
+    color: #ff758f;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.details-box {
+    background: #fff0f3;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: left;
+    margin-bottom: 25px;
+    width: 100%; 
+}
+
+.detail-item {
+    margin-bottom: 12px;
+    font-size: 1rem;
+    color: #590d22;
+}
+
+.detail-item strong {
+    color: #c9184a;
+}
+
+.note {
+    font-size: 0.9rem;
+    color: #a3a3a3;
+    font-style: italic;
+}

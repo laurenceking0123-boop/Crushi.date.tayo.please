@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Special Invitation 💖</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="card question-screen" id="screen1">
+        <h1>Will you go on a date with me?</h1>
+        <p>just say yes 🌸</p>
+        <div class="btn-container">
+            <button id="yesBtn" onclick="goToScreen2()">Yes ✨</button>
+            <button id="noBtn" onmouseover="dodgeButton()" ontouchstart="dodgeButton()">No</button>
+        </div>
+    </div>
+
+    <div class="card date-screen" id="screen2">
+        <h2>Yay! Now pick our date 💕</h2>
+        <div class="input-container">
+            <input type="date" id="dateInput">
+        </div>
+        <button class="action-btn" onclick="goToScreen3()">Next</button>
+    </div>
+
+    <div class="card time-screen" id="screen3">
+        <h2>What time works for you? ⏰</h2>
+        <div class="input-container">
+            <input type="time" id="timeInput" value="19:00">
+        </div>
+        <button class="action-btn" onclick="goToScreen4()">Next</button>
+    </div>
+
+    <div class="card location-screen" id="screen4">
+        <h2>Where should we go? 📍</h2>
+        <div class="input-container">
+            <select id="locationInput">
+                <option value="Dueg Kapya Ken Talna 🌿">Dueg Kapya Ken Talna 🌿</option>
+                <option value="Cafe Josefina ☕">Cafe Josefina ☕</option>
+                <option value="SM Tarlac 🌃">SM Tarlac 🌃</option>
+                <option value="Surprise Location ✨">Surprise Me! ✨</option>
+            </select>
+        </div>
+        <button class="action-btn" onclick="goToScreen5()">Send it ✉️</button>
+    </div>
+
+
+
+    <div class="card invitation-screen" id="screen5">
+        <h2>YAY! It's a Date! 🥰</h2>
+        <div class="sub-title">A Night of Love</div>
+        
+        <div class="details-box">
+            <div class="detail-item">📅 <strong>When:</strong> <span id="chosenDateTime">Pending...</span></div>
+            <div class="detail-item">📍 <strong>Where:</strong> <span id="chosenLocation">Pending...</span></div>
+            <div class="detail-item">✨ <strong>Vibe:</strong> Cozy, full of laughter, and good food</div>
+            <div class="detail-item">🚗 <strong>The Plan:</strong> Aesthetic café hopping, good food, and nonstop chika & photos 🍰</div>
+        </div>
+
+        <p class="note">See you! Hindi na pwedeng bawiin, bawal mag-No. ❤️</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
